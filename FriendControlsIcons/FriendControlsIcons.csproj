@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64C5418D-EE1E-46B0-991C-7EBC5908A5E1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.Base</RootNamespace>
+    <AssemblyName>FriendControlsIcons</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Icon.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>FS.Base</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\DatabaseOn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\DatabaseOff.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Connect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\UnConnect.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Tables.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Table.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Views.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\View.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Navigator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Connectors.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\FileNew.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\FileOpen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\FileSave.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Editor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Procedures.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Procedure.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Funcs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Func.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Properties.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\QuerieStop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\QuerieExec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Design.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Directory.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ColumnNull.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ColumnNotNull.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ColumnPrimary.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Index.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\IndexUnique.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\IndexFullText.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
