@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendDataMySQL", "FriendDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendDataOracle", "FriendData.Oracle\FriendDataOracle.csproj", "{90A263C7-D103-4CDA-B12F-83AF650C2467}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendWizard", "FriendWizard\FriendWizard.csproj", "{39B74843-C698-4A54-A62C-FE4109655534}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{90A263C7-D103-4CDA-B12F-83AF650C2467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90A263C7-D103-4CDA-B12F-83AF650C2467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90A263C7-D103-4CDA-B12F-83AF650C2467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B74843-C698-4A54-A62C-FE4109655534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B74843-C698-4A54-A62C-FE4109655534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B74843-C698-4A54-A62C-FE4109655534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B74843-C698-4A54-A62C-FE4109655534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
