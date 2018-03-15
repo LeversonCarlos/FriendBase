@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendData", "FriendData\Fr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendDataMsSQL", "FriendData.MsSql\FriendDataMsSQL.csproj", "{49ACA590-8BC9-4BF3-A4C9-EC19758CD914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendDataMySQL", "FriendData.MySql\FriendDataMySQL.csproj", "{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{49ACA590-8BC9-4BF3-A4C9-EC19758CD914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49ACA590-8BC9-4BF3-A4C9-EC19758CD914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49ACA590-8BC9-4BF3-A4C9-EC19758CD914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
