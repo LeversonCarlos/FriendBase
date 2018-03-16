@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendControlsIcons", "Frie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendControls", "FriendControls\FriendControls.csproj", "{696E20D7-D5BA-4491-94BA-80CBC113BDE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendConnector", "FriendConnector\FriendConnector.csproj", "{27D834C9-1090-43C3-976B-D6767A86FDAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{696E20D7-D5BA-4491-94BA-80CBC113BDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{696E20D7-D5BA-4491-94BA-80CBC113BDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{696E20D7-D5BA-4491-94BA-80CBC113BDE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27D834C9-1090-43C3-976B-D6767A86FDAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27D834C9-1090-43C3-976B-D6767A86FDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27D834C9-1090-43C3-976B-D6767A86FDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27D834C9-1090-43C3-976B-D6767A86FDAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
