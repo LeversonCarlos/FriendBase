@@ -31,8 +31,7 @@ namespace FS.Data.Common
             get
             {
                string objRET = this.TypeName;
-               objRET = objRET.Replace("FS", "Friend");
-               objRET = objRET.Replace(".", "");
+               objRET = objRET.Replace("FS.", "Friend");
                objRET = objRET.Replace(" ", "");
                objRET += ".dll";
 

@@ -32,7 +32,7 @@ namespace FS.Data.Common.Engine
          FS.Data.Common.Data oData = null;
          try
          {
-            string sTypeName = sFileName.Replace("FriendData", "FS.Data.");
+            string sTypeName = sFileName.Replace("FriendData.", "FS.Data.");
             oData = FS.Data.Common.Abstracter.GetDataByTypeName(sTypeName);
             oType = oData.GetEngineType();
             oType.TypeName = sTypeName; 
