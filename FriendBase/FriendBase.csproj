@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BF12F8F-ABC9-41A7-B414-E1CFD37E953D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FS.Base</RootNamespace>
+    <AssemblyName>FriendBase</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>SqlLite.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="History.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FriendConnector\FriendConnector.csproj">
+      <Project>{27D834C9-1090-43C3-976B-D6767A86FDAF}</Project>
+      <Name>FriendConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendData.MsSql\FriendDataMsSQL.csproj">
+      <Project>{49ACA590-8BC9-4BF3-A4C9-EC19758CD914}</Project>
+      <Name>FriendDataMsSQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendData.MySql\FriendDataMySQL.csproj">
+      <Project>{7B69C1B1-156E-4BD6-B79A-6691BF1CC644}</Project>
+      <Name>FriendDataMySQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendData.Oracle\FriendDataOracle.csproj">
+      <Project>{90A263C7-D103-4CDA-B12F-83AF650C2467}</Project>
+      <Name>FriendDataOracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendData\FriendData.csproj">
+      <Project>{5E3A88E8-E1C4-4401-8E68-B210C5C3E0D9}</Project>
+      <Name>FriendData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendPackage\FriendPackage.csproj">
+      <Project>{AF36600A-CE82-4CE2-9584-A43B227CA7C2}</Project>
+      <Name>FriendPackage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendControlsIcons\FriendControlsIcons.csproj">
+      <Project>{64C5418D-EE1E-46B0-991C-7EBC5908A5E1}</Project>
+      <Name>FriendBaseImages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FriendControls\FriendControls.csproj">
+      <Project>{696E20D7-D5BA-4491-94BA-80CBC113BDE5}</Project>
+      <Name>FriendBaseUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlLite.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
