@@ -154,40 +154,30 @@ namespace FS.Data
       #region Base_InitializeSchema_COLUMNS
       private string Base_InitializeSchema_COLUMNS(string ObjectName, bool FullData)
       {
-         return null;
-         /*
-         return "" +
-            "SELECT " +
-               "tCOLUMNS.TABLE_NAME As TableName, " +
-               "tCOLUMNS.ORDINAL_POSITION As ColumnID, " +
-               "tCOLUMNS.COLUMN_NAME As ColumnName, " +
-               "tCOLUMNS.DATA_TYPE As TypeName, " +
-               "tCOLUMNS.CHARACTER_MAXIMUM_LENGTH As TypeSize, " +
-               "tCOLUMNS.COLLATION_NAME As ColumnCollation, " +
-               "cast((case when tCOLUMNS.IS_NULLABLE='YES' then 1 else 0 end) as smallint) As isNullable, " +
-               "Null As isIdentity, " +
-               "cast((case when coalesce(tUSAGE.ORDINAL_POSITION,0)<>0 then 1 else 0 end) as smallint) As isPrimaryKey " +
-            "FROM information_schema.COLUMNS tCOLUMNS " +
-               "LEFT JOIN information_schema.TABLE_CONSTRAINTS tCONSTRAINTS On " +
-               "(" +
-                  "tCONSTRAINTS.TABLE_CATALOG = tCOLUMNS.TABLE_CATALOG And " +
-                  "tCONSTRAINTS.TABLE_NAME = tCOLUMNS.TABLE_NAME And " +
-                  "tCONSTRAINTS.CONSTRAINT_TYPE = 'PRIMARY KEY' " +
-                ")" +
-               "LEFT JOIN information_schema.KEY_COLUMN_USAGE tUSAGE On " +
-               "(" +
-                  "tUSAGE.CONSTRAINT_CATALOG = tCONSTRAINTS.CONSTRAINT_CATALOG And " +
-                  "tUSAGE.CONSTRAINT_NAME = tCONSTRAINTS.CONSTRAINT_NAME And " +
-                  "tUSAGE.TABLE_NAME = tCOLUMNS.TABLE_NAME And " +
-                  "tUSAGE.COLUMN_NAME = tCOLUMNS.COLUMN_NAME " +
-                ")" +
-            "WHERE " +
-               "tCOLUMNS.TABLE_CATALOG = '" + this.DataBase + "' And " +
-               "tCOLUMNS.TABLE_NAME = '" + ObjectName + "' " +
-            "ORDER BY " +
-               "tCOLUMNS.ORDINAL_POSITION " +
-            "";
-            */
+         using (var cmd = this.GetCommand())
+         {
+            cmd.CommandText = "pragma table_info(" + ObjectName + ");";
+            using (var table = this.GetDataTable(cmd))
+            {
+               var result = string.Empty;
+               foreach (System.Data.DataRow row in table.Rows)
+               {
+                  result += (string.IsNullOrEmpty(result) ? "" : " union " + Environment.NewLine);
+                  result += "select " +
+                     "'" + ObjectName + "' As TableName, " +
+                     row["cid"] + " As ColumnID, " +
+                     "'" + row["name"] + "' As ColumnName, " +
+                     "'" + row["type"] + "' As TypeName, " +
+                     "null As TypeSize, " +
+                     "null As ColumnCollation, " +
+                     (row["notnull"].ToString() =="1" ? "0" : "1") + " As isNullable, " +
+                     "Null As isIdentity, " +
+                     row["pk"] + " As isPrimaryKey " +
+                     "";
+               }
+               return result;
+            }
+         }
       }
       #endregion
 
