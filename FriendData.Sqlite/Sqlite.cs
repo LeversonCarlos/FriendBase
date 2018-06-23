@@ -184,33 +184,23 @@ namespace FS.Data
       #region Base_InitializeSchema_INDEXES
       private string Base_InitializeSchema_INDEXES(string ObjectName, bool FullData)
       {
-         return null;
-         /*
-         return "" +
-            "SELECT " +
-               "obj.Name As TableName, " +
-               "ind.Name As IndexName, " +
+         return "" + 
+            "select " +
+               "'" + ObjectName + "' As TableName, " +
+               "name As IndexName, " +
                "(" +
                   "case " +
-                  "when ind.is_unique=1 then 'UNIQUE KEY' " +
+                  "when (sql like '% unique index %')=1 then 'UNIQUE KEY' " +
                   "else 'KEY' " +
                   "end " +
                 ") As IndexType, " +
-               "col.Name As ColumnName " +
-            "FROM sys.Indexes ind " +
-               "INNER JOIN sys.objects obj on (obj.object_id = ind.object_id And obj.Type = 'U') " +
-               "LEFT JOIN sys.index_columns indcol On (indcol.object_id = ind.object_id And indcol.index_id = ind.index_id) " +
-               "LEFT JOIN sys.columns col On (col.object_id = indcol.object_id And col.column_id = indcol.column_id) " +
-            "WHERE " +
-               "obj.Name = '" + ObjectName + "' And " +
-               "ind.is_primary_key <> 1 And " +
-               "ind.Type <> 0 " +
-            "ORDER BY " +
-               "obj.Name, " +
-               "ind.Name, " +
-               "indcol.key_ordinal " +
+               "null As ColumnName " +
+            "from sqlite_master " + 
+            "where " + 
+               "type='index' and " + 
+               "tbl_name='" + ObjectName + "' and " + 
+               "sql <> ''" + 
             "";
-            */
       }
       #endregion
 
