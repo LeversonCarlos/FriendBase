@@ -98,6 +98,10 @@
       <Project>{90A263C7-D103-4CDA-B12F-83AF650C2467}</Project>
       <Name>FriendDataOracle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FriendData.Sqlite\FriendDataSqlite.csproj">
+      <Project>{77c798b2-11a8-4010-b82f-70bc677ffaf7}</Project>
+      <Name>FriendDataSqlite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FriendData\FriendData.csproj">
       <Project>{5E3A88E8-E1C4-4401-8E68-B210C5C3E0D9}</Project>
       <Name>FriendData</Name>
