@@ -14,9 +14,9 @@ namespace FS.Data
          this.GetConnectionStringSteps += Base_GetConnectionStringSteps;
          this.GetConnectionStringParams += Base_GetConnectionStringParams;
          this.InitializeConnection += Base_InitializeConnection;
-         //this.InitializeAdapter += Base_InitializeAdapter;
-         //this.InitializeCommand += Base_InitializeCommand;
-         //this.InitializeCommandBuilder += Base_InitializeCommandBuilder;
+         this.InitializeAdapter += Base_InitializeAdapter;
+         this.InitializeCommand += Base_InitializeCommand;
+         this.InitializeCommandBuilder += Base_InitializeCommandBuilder;
          //this.InitializeSchema += Base_InitializeSchema;
          //this.InitializeScript += Base_InitializeScript;
       }
@@ -66,10 +66,32 @@ namespace FS.Data
       }
       #endregion
 
+
       #region Base_InitializeConnection
       private void Base_InitializeConnection(ref System.Data.Common.DbConnection Value)
       {
          Value = new System.Data.SQLite.SQLiteConnection(this.ConnectionString);
+      }
+      #endregion
+
+      #region Base_InitializeAdapter
+      private void Base_InitializeAdapter(ref System.Data.Common.DbDataAdapter Value)
+      {
+         Value = new System.Data.SQLite.SQLiteDataAdapter();
+      }
+      #endregion
+
+      #region Base_InitializeCommand
+      private void Base_InitializeCommand(ref System.Data.Common.DbCommand Value)
+      {
+         Value = new System.Data.SQLite.SQLiteCommand();
+      }
+      #endregion
+
+      #region Base_InitializeCommandBuilder
+      private void Base_InitializeCommandBuilder(ref System.Data.Common.DbCommandBuilder Value)
+      {
+         Value = new System.Data.SQLite.SQLiteCommandBuilder();
       }
       #endregion
 
