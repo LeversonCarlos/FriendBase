@@ -11,8 +11,8 @@ namespace FS.Data
       public Sqlite()
       {
          this.EngineType += Base_EngineType;
-         // this.GetConnectionStringParams += Base_GetConnectionStringParams;
-         //this.GetConnectionStringSteps += Base_GetConnectionStringSteps;
+         this.GetConnectionStringSteps += Base_GetConnectionStringSteps;
+         this.GetConnectionStringParams += Base_GetConnectionStringParams;
          //this.InitializeConnection += Base_InitializeConnection;
          //this.InitializeAdapter += Base_InitializeAdapter;
          //this.InitializeCommand += Base_InitializeCommand;
@@ -32,6 +32,24 @@ namespace FS.Data
          Value.Icon = Resources.Icon;
       }
       #endregion
+
+      #region Base_GetConnectionStringSteps
+      private void Base_GetConnectionStringSteps(ref System.Collections.ArrayList Value)
+      {
+         Value = new System.Collections.ArrayList();
+         Value.Add(new object[] { "Path", "Inform the full path for the database file" });
+      }
+      #endregion
+
+      #region Base_GetConnectionStringParams
+      private void Base_GetConnectionStringParams(ref Common.ConnKeys Value)
+      {
+         Value = new Common.ConnKeys();
+         Value.Add("FilePath", string.Empty.GetType(), "Path");
+      }
+      #endregion
+
+
 
       #endregion
 
