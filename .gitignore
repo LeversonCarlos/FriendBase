@@ -10,6 +10,8 @@
 /FriendData.MySql/obj
 /FriendData.Oracle/bin
 /FriendData.Oracle/obj
+/FriendData.Sqlite/bin
+/FriendData.Sqlite/obj
 /FriendWizard/bin
 /FriendWizard/obj
 /FriendPackage/bin
